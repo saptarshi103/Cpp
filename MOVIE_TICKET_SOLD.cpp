@@ -43,7 +43,6 @@ class Movie{
 		   	       cout<<"Amount donated:"<<setw(21)<<setfill('.')<<".$"<<this->ad<<endl;
 		   	       cout<<"Nate sale:"<<setw(26)<<setfill('.')<<".$"<<this->ns<<endl;
 		          };
-	  
      };
      
 int main(){
