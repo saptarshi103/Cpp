@@ -1,24 +1,22 @@
-#include<iostream>
-using namespace std;
-class Rectangle{
-	int length;
-	int breadth;
-	int circumference;
-	int area;
-	friend void getRect();
+#include <iostream>
 
-	public:
-	Rectangle(int a,int b){
-		length=a;
-	    breadth=b;
-	}
-	void getRect(){
-		circumference=2*length+2*breadth;
-		area=length*breadth;
-		cout<<"area :"<<area<<endl<<"Circumference: "<<circumference<<endl;
-	}
+class MyClass {
+private:
+    int myNumber;
+
+public:
+    MyClass(int num) : myNumber(num) {}
+
+    friend void printNumber(const MyClass &obj);
 };
-int main(){
-	Rectangle rt(2,2);
-	rt.getRect();
+
+void printNumber(const MyClass &obj) {
+    std::cout << "The number is: " << obj.myNumber << std::endl;
 }
+
+int main() {
+    MyClass obj(42);
+    printNumber(obj);
+    return 0;
+}
+
